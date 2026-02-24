@@ -142,6 +142,91 @@ export default function MobileCatalog() {
           ))}
       </main>
 
+      {/* --- INTEGRATED CUSTOM PROJECT SECTION --- */}
+      <section className="px-6 py-16 mt-8 mb-20 relative">
+        {/* A very subtle background "wash" instead of a solid block */}
+        <div className="absolute inset-0 bg-indigo-50/30 -skew-y-1 z-0"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-widest mb-4">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+              </span>
+              Projetos Especiais
+            </div>
+            <h2 className="text-3xl font-black tracking-tight text-slate-900">
+              Tem um projeto único? <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">
+                Nós fabricamos para você.
+              </span>
+            </h2>
+          </div>
+
+          {/* Horizontal Steps for better flow on mobile and desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            {[
+              {
+                step: "01",
+                title: "Conceito",
+                desc: "Envie sua ideia ou arquivo 3D.",
+              },
+              {
+                step: "02",
+                title: "Análise",
+                desc: "Validamos a viabilidade técnica.",
+              },
+              {
+                step: "03",
+                title: "Produção",
+                desc: "Impressão em alta fidelidade.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="group p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-indigo-300 hover:shadow-md transition-all duration-300"
+              >
+                <span className="block text-indigo-600 font-mono font-bold mb-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                  {item.step}
+                </span>
+                <h4 className="font-bold text-slate-800 mb-1">{item.title}</h4>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center">
+            <a
+              href={`https://wa.me/5598989079722?text=${encodeURIComponent(
+                "Olá KM 3D! Gostaria de conversar sobre um projeto personalizado.",
+              )}`}
+              target="_blank"
+              className="group relative inline-flex items-center gap-3 bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold shadow-xl hover:bg-indigo-600 transition-all active:scale-95"
+            >
+              Iniciar Consultoria Técnica
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:translate-x-1 transition-transform"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* --- FULLSCREEN VIEWER --- */}
       {selectedImage && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white p-4 sm:p-8 animate-in slide-in-from-bottom duration-300">
