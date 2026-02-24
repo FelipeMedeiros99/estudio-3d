@@ -183,7 +183,7 @@ export default function MobileCatalog() {
             </div>
 
             <a
-              href={`https://wa.me/559882046039?text=${encodeURIComponent(
+              href={`https://wa.me/5598989079722?text=${encodeURIComponent(
                 `Olá KM 3D! Gostaria de um orçamento para esta peça: ${window.location.origin}${selectedImage}`,
               )}`}
               target="_blank"
@@ -197,7 +197,7 @@ export default function MobileCatalog() {
 
       {/* --- FIXED WHATSAPP BUTTON --- */}
       <a
-        href="https://wa.me/559882046039?text=Olá KM 3D! Vi seu catálogo e gostaria de solicitar um orçamento."
+        href="https://wa.me/5598989079722?text=Olá KM 3D! Vi seu catálogo e gostaria de solicitar um orçamento."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-90 transition-all duration-300 group flex items-center justify-center"
