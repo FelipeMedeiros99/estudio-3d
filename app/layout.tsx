@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "KM 3D",
     images: [
       {
-        url: "/logo.jpeg", // Ensure this file is in your /public folder!
+        url: "/icon.jpeg", // Ensure this file is in your /public folder!
         width: 1200,
         height: 630,
         alt: "KM 3D Preview",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "KM 3D",
     description: "Modelos 3D de alta qualidade.",
-    images: ["/logo.jpeg"],
+    images: ["/icon.jpeg"],
   },
 };
 
