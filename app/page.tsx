@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import { CATALOG_DATA } from "./data";
-import logo from "./logo.jpeg";
+import logo from "./icon.jpeg";
 
 export default function MobileCatalog() {
   const [activeCategory, setActiveCategory] = useState<string | "all">("all");
