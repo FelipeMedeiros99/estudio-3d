@@ -13,19 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // 1. ADD THIS: It tells Next.js how to build absolute URLs for your images
+  metadataBase: new URL("https://km-3d.vercel.app"),
+
   title: "KM 3D | Catálogo de Impressão 3D",
   description:
     "Transformando ideias em realidade. Confira nosso catálogo de Action Figures, Peças Técnicas e Suportes Personalizados.",
 
-  // This is what WhatsApp looks for:
   openGraph: {
     title: "KM 3D | Catálogo Oficial",
     description: "Explore os melhores modelos 3D produzidos com alta precisão.",
-    url: "https://km-3d.vercel.app/", // Replace with your real URL later
+    url: "https://km-3d.vercel.app/",
     siteName: "KM 3D",
     images: [
       {
-        url: "/logo.jpeg", // A version of your logo optimized for sharing
+        url: "/logo.jpeg", // Ensure this file is in your /public folder!
         width: 1200,
         height: 630,
         alt: "KM 3D Preview",
@@ -35,7 +37,6 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  // Twitter card for extra professional polish
   twitter: {
     card: "summary_large_image",
     title: "KM 3D",
@@ -50,7 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
+      {/* 2. UPDATE THIS: Apply the font variables and antialiased class */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
