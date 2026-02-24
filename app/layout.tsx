@@ -13,22 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mateus 3D Lab | Catálogo de Impressão 3D",
+  title: "KM 3D | Catálogo de Impressão 3D",
   description:
     "Transformando ideias em realidade. Confira nosso catálogo de Action Figures, Peças Técnicas e Suportes Personalizados.",
 
   // This is what WhatsApp looks for:
   openGraph: {
-    title: "Mateus 3D Lab | Catálogo Oficial",
+    title: "KM 3D | Catálogo Oficial",
     description: "Explore os melhores modelos 3D produzidos com alta precisão.",
-    url: "https://seu-dominio.com.br", // Replace with your real URL later
-    siteName: "Mateus 3D Lab",
+    url: "https://km-3d.vercel.app/", // Replace with your real URL later
+    siteName: "KM 3D",
     images: [
       {
-        url: "/og-image.jpg", // A version of your logo optimized for sharing
+        url: "/logo.jpeg", // A version of your logo optimized for sharing
         width: 1200,
         height: 630,
-        alt: "Mateus 3D Lab Preview",
+        alt: "KM 3D Preview",
       },
     ],
     locale: "pt_BR",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   // Twitter card for extra professional polish
   twitter: {
     card: "summary_large_image",
-    title: "Mateus 3D Lab",
+    title: "KM 3D",
     description: "Modelos 3D de alta qualidade.",
-    images: ["/og-image.jpg"],
+    images: ["/logo.jpeg"],
   },
 };
 
