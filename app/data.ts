@@ -1,5 +1,5 @@
 const whatsappMessage = encodeURIComponent(
-  "Olá! Gostaria de solicitar um orçamento para um projeto personalizado.",
+  "Olá, vim pelo Site! \nGostaria de solicitar um orçamento para um projeto personalizado.",
 );
 
 export const TELEFONE = "5598989079722"; // Substitua pelo seu número de telefone com código do país e DDD
