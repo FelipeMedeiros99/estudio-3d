@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { URLS } from "../data";
 
 const NAV_ITEMS = [
   { id: "sobre", label: "Sobre" },
@@ -128,7 +129,8 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#orcamento"
+            href={`https://wa.me/${URLS.whatsapp}`}
+            target="_blank"
             onClick={() => setIsMobileMenuOpen(false)}
             className="mt-2 text-center px-5 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors"
           >

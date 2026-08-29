@@ -1,15 +1,21 @@
-export const CONTACTS = {
+const whatsappMessage = encodeURIComponent(
+  "Olá! Gostaria de solicitar um orçamento para um projeto personalizado.",
+);
+
+export const TELEFONE = "5598989079722"; // Substitua pelo seu número de telefone com código do país e DDD
+
+export const URLS = {
   // Somente números, com código do país e DDD.
   // Exemplo: 5598999999999
-  whatsapp: "5598989079722",
+  whatsapp: `https://wa.me/${TELEFONE}?text=${whatsappMessage}`,
 
-  email: "contato@seudominio.com",
+  // email: "contato@seudominio.com",
 
   // Sem @
   instagram: "https://www.instagram.com/km3dbr/",
 
   // Pode ser um link compartilhado do Google Maps
-  maps: "https://maps.google.com/",
+  // maps: "https://maps.google.com/",
 };
 
 export const projetos = [

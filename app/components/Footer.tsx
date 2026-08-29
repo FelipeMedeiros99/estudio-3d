@@ -6,6 +6,8 @@ import {
   TbMapPin,
   TbArrowRight,
 } from "react-icons/tb";
+import { TELEFONE, URLS } from "../data";
+import { formatPhoneNumber } from "../utils/formatTelefone";
 
 export default function Footer({ id }: { id: string }) {
   const currentYear = new Date().getFullYear();
@@ -61,30 +63,26 @@ export default function Footer({ id }: { id: string }) {
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3 text-neutral-400 text-sm">
                 <TbMapPin className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                <span>
-                  São Luís, MA
-                  <br />
-                  Atendimento com hora marcada
-                </span>
+                <span>São Luís, MA</span>
               </li>
               <li>
                 <a
-                  href="mailto:contato@slz3d.com.br"
+                  href={URLS.instagram}
                   className="flex items-center gap-3 text-neutral-400 hover:text-white transition-colors text-sm"
                 >
-                  <TbMail className="w-5 h-5 text-emerald-500 shrink-0" />
-                  contato@slz3d.com.br
+                  <TbBrandInstagram className="w-5 h-5 text-emerald-500 shrink-0" />
+                  KM3D
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/5598999999999"
+                  href={URLS.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-neutral-400 hover:text-white transition-colors text-sm"
                 >
                   <TbBrandWhatsapp className="w-5 h-5 text-emerald-500 shrink-0" />
-                  (98) 99999-9999
+                  {formatPhoneNumber(TELEFONE)}
                 </a>
               </li>
             </ul>
@@ -97,7 +95,7 @@ export default function Footer({ id }: { id: string }) {
             </h4>
             <div className="flex gap-4 mb-6">
               <a
-                href="https://instagram.com/slz3d"
+                href={URLS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-emerald-500/10 hover:text-emerald-400 hover:border-emerald-500/30 transition-all duration-300"
@@ -106,7 +104,7 @@ export default function Footer({ id }: { id: string }) {
                 <TbBrandInstagram className="w-5 h-5" />
               </a>
               <a
-                href="https://wa.me/5598999999999"
+                href={URLS.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-blue-500/10 hover:text-blue-400 hover:border-blue-500/30 transition-all duration-300"
@@ -116,7 +114,7 @@ export default function Footer({ id }: { id: string }) {
               </a>
             </div>
             <a
-              href="https://wa.me/5598999999999?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20impressão%203D."
+              href={URLS.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 rounded-lg transition-colors w-full sm:w-auto text-center"

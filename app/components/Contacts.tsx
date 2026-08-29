@@ -1,5 +1,7 @@
 "use client";
-import { CONTACTS } from "../data";
+import { URLS } from "../data";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FiMail, FiMapPin } from "react-icons/fi";
 
 export default function Contact({ id }: { id?: string }) {
   const whatsappMessage = encodeURIComponent(
@@ -11,93 +13,40 @@ export default function Contact({ id }: { id?: string }) {
       title: "WhatsApp",
       description:
         "Fale diretamente conosco para tirar dúvidas e solicitar seu orçamento.",
-      href: `https://wa.me/${CONTACTS.whatsapp}?text=${whatsappMessage}`,
+      href: `https://wa.me/${URLS.whatsapp}?text=${whatsappMessage}`,
       label: "Chamar no WhatsApp",
       external: true,
-      icon: (
-        <svg
-          className="w-6 h-6"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M16.75 13.96c-.25-.13-1.47-.73-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.25-.74-.66-1.24-1.48-1.38-1.73-.14-.25-.01-.39.11-.52.11-.11.25-.29.37-.43.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.41-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.29Z" />
-          <path d="M12.04 2C6.52 2 2.04 6.48 2.04 12c0 1.77.46 3.43 1.27 4.87L2 22l5.27-1.28A9.95 9.95 0 0 0 12.04 22C17.56 22 22.04 17.52 22.04 12S17.56 2 12.04 2Zm0 18.18c-1.61 0-3.12-.47-4.39-1.27l-.31-.18-3.13.76.84-3.04-.2-.32A8.12 8.12 0 0 1 3.86 12c0-4.51 3.67-8.18 8.18-8.18S20.22 7.49 20.22 12s-3.67 8.18-8.18 8.18Z" />
-        </svg>
-      ),
+      icon: <FaWhatsapp className="w-6 h-6" />,
     },
-    {
-      title: "E-mail",
-      description:
-        "Envie todos os detalhes do seu projeto para que possamos analisar sua ideia.",
-      href: `mailto:${CONTACTS.email}?subject=${encodeURIComponent(
-        "Solicitação de orçamento",
-      )}`,
-      label: "Enviar e-mail",
-      external: false,
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.8}
-            d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v10a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-    },
+    // {
+    //   title: "E-mail",
+    //   description:
+    //     "Envie todos os detalhes do seu projeto para que possamos analisar sua ideia.",
+    //   href: `mailto:${URLS.email}?subject=${encodeURIComponent(
+    //     "Solicitação de orçamento",
+    //   )}`,
+    //   label: "Enviar e-mail",
+    //   external: false,
+    //   icon: <FiMail className="w-6 h-6" />,
+    // },
     {
       title: "Instagram",
       description:
         "Acompanhe nossos trabalhos, novidades e projetos personalizados.",
-      href: `https://www.instagram.com/${CONTACTS.instagram}/`,
+      href: URLS.instagram,
       label: "Ver Instagram",
       external: true,
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <rect x="3" y="3" width="18" height="18" rx="5" strokeWidth={1.8} />
-          <circle cx="12" cy="12" r="4" strokeWidth={1.8} />
-          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-        </svg>
-      ),
+      icon: <FaInstagram className="w-6 h-6" />,
     },
-    {
-      title: "Localização",
-      description:
-        "Veja nossa localização no mapa e encontre a melhor rota até nós.",
-      href: CONTACTS.maps,
-      label: "Abrir no Maps",
-      external: true,
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.8}
-            d="M12 21s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z"
-          />
-          <circle cx="12" cy="11" r="2.5" strokeWidth={1.8} />
-        </svg>
-      ),
-    },
+    // {
+    //   title: "Localização",
+    //   description:
+    //     "Veja nossa localização no mapa e encontre a melhor rota até nós.",
+    //   href: URLS.maps,
+    //   label: "Abrir no Maps",
+    //   external: true,
+    //   icon: <FiMapPin className="w-6 h-6" />,
+    // },
   ];
 
   return (
