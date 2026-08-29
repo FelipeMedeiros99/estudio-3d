@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { URLS } from "../data";
 
 export default function Hero() {
   return (
@@ -21,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* 3. Camada de Conteúdo (Foreground) */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-6 flex flex-col items-start">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-6 flex flex-col items-start pt-40 md:pt-0">
         {/* Badge superior (Micro-copy para gerar autoridade) */}
         <span className="inline-block py-1 px-3 mb-6 border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium tracking-wider rounded-full uppercase backdrop-blur-sm">
           Manufatura Aditiva
@@ -46,14 +47,15 @@ export default function Hero() {
         {/* Grupo de Botões (CTAs) */}
         <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <Link
-            href="#orcamento"
+            href={URLS.whatsapp}
+            target="_blank"
             className="flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]"
           >
             Solicitar Orçamento Técnico
           </Link>
 
           <Link
-            href="#processo"
+            href="#engenharia"
             className="flex items-center justify-center px-8 py-4 bg-transparent border border-neutral-600 hover:border-white text-neutral-200 hover:text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm"
           >
             Entender o Processo

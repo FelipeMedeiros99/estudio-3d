@@ -53,9 +53,14 @@ export default function Navbar() {
           className="group flex items-center gap-2"
           onClick={closeMobileMenu}
         >
-          <span className="text-2xl font-black tracking-tighter text-white">
+          <img
+            src="./icon.jpeg"
+            alt="Logo KM3D"
+            className="w-12 h-12 rounded-md"
+          />
+          {/* <span className="text-2xl font-black tracking-tighter text-white">
             KM<span className="text-emerald-400">3D</span>
-          </span>
+          </span> */}
         </Link>
 
         {/* Navegação Desktop */}

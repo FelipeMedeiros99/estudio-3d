@@ -8,6 +8,7 @@ import {
 } from "react-icons/tb";
 import { TELEFONE, URLS } from "../data";
 import { formatPhoneNumber } from "../utils/formatTelefone";
+import Image from "next/image";
 
 export default function Footer({ id }: { id: string }) {
   const currentYear = new Date().getFullYear();
@@ -24,11 +25,16 @@ export default function Footer({ id }: { id: string }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Coluna 1: Marca e Bio */}
           <div className="flex flex-col">
-            <Link href="/" className="inline-block mb-6 group">
+            <img
+              src="./icon.jpeg"
+              alt="Logo KM3D"
+              className="w-16 h-16 mb-4 rounded-md"
+            />
+            {/* <Link href="/" className="inline-block mb-6 group">
               <span className="text-3xl font-black text-white tracking-tighter">
                 KM<span className="text-emerald-400">3D</span>
               </span>
-            </Link>
+            </Link> */}
             <p className="text-neutral-400 text-sm leading-relaxed mb-6">
               Transformando ideias e arquivos digitais em peças físicas reais.
               Impressão em filamento de alta resistência, curadoria de modelos e
