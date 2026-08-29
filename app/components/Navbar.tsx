@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { id: "engenharia", label: "Engenharia" },
   { id: "materiais", label: "Materiais" },
   { id: "portfolio", label: "Portfólio" },
+  { id: "contact", label: "Contato" },
 ];
 
 export default function Navbar() {
@@ -57,13 +58,13 @@ export default function Navbar() {
 
         {/* Centro/Direita: Navegação Desktop */}
         <nav className="hidden md:flex items-center gap-8">
-          {["Sobre", "Engenharia", "Materiais", "Portfólio"].map((item) => (
+          {NAV_ITEMS.map(({ id, label }) => (
             <Link
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={id}
+              href={`#${id.toLowerCase()}`}
               className="text-sm font-medium text-neutral-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-emerald-400 after:transition-all hover:after:w-full"
             >
-              {item}
+              {label}
             </Link>
           ))}
 

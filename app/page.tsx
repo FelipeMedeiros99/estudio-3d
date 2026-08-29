@@ -4,6 +4,7 @@ import Process from "./components/Process";
 import Materials from "./components/Materials";
 import Portfolio from "./components/Portifolio";
 import Footer from "./components/Footer";
+import Contact from "./components/Contacts";
 
 // Futuras importações (deixadas comentadas para o roadmap)
 // import Contact from './components/Contact';
@@ -28,7 +29,7 @@ export default function Home() {
       <Process id="engenharia" />
       <Materials id="materiais" />
       <Portfolio id="portfolio" />
-      {/* <Contact id="orcamento" /> */}
+      <Contact id="contact" />
       <Footer id="footer" />
     </main>
   );
