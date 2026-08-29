@@ -4,6 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+const NAV_ITEMS = [
+  { id: "sobre", label: "Sobre" },
+  { id: "engenharia", label: "Engenharia" },
+  { id: "materiais", label: "Materiais" },
+  { id: "portfolio", label: "Portfólio" },
+];
+
 export default function Navbar() {
   // Estados para controle de interface
   const [isScrolled, setIsScrolled] = useState(false);
@@ -109,14 +116,14 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col px-6 gap-4">
-          {["Sobre", "Engenharia", "Materiais", "Portfólio"].map((item) => (
+          {NAV_ITEMS.map(({ id, label }) => (
             <Link
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={id}
+              href={`#${id.toLowerCase()}`}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-base font-medium text-neutral-300 hover:text-white transition-colors"
             >
-              {item}
+              {label}
             </Link>
           ))}
           <Link

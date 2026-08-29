@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
 
       {/* 3. Camada de Conteúdo (Foreground) */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-col items-start">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-6 flex flex-col items-start">
         {/* Badge superior (Micro-copy para gerar autoridade) */}
         <span className="inline-block py-1 px-3 mb-6 border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium tracking-wider rounded-full uppercase backdrop-blur-sm">
           Manufatura Aditiva

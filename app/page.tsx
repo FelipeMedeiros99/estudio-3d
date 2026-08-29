@@ -1,11 +1,12 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Process from "./components/Process";
+import Materials from "./components/Materials";
+import Portfolio from "./components/Portifolio";
+import Footer from "./components/Footer";
 
 // Futuras importações (deixadas comentadas para o roadmap)
-// import Pipeline from '@/components/Pipeline';
-// import Materials from '@/components/Materials';
-// import Portfolio from '@/components/Portfolio';
-// import Contact from '@/components/Contact';
+// import Contact from './components/Contact';
 
 export default function Home() {
   return (
@@ -24,10 +25,11 @@ export default function Home() {
         funcione com smooth scrolling.
       */}
 
-      {/* <Pipeline id="engenharia" /> */}
-      {/* <Materials id="materiais" /> */}
-      {/* <Portfolio id="portfolio" /> */}
+      <Process id="engenharia" />
+      <Materials id="materiais" />
+      <Portfolio id="portfolio" />
       {/* <Contact id="orcamento" /> */}
+      <Footer id="footer" />
     </main>
   );
 }
